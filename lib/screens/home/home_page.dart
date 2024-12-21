@@ -43,37 +43,39 @@ class _HomePageState extends State<HomePage> {
         builder: (context, state) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'Discover our exclusive products',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Discover our exclusive products',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
                   ),
-                ),
-                SizedBox(height: Constants.height * 0.02),
-                const Text(
-                  'In this marketplace, you will find various technologies at the cheapest price.',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey,
+                  SizedBox(height: Constants.height * 0.02),
+                  const Text(
+                    'In this marketplace, you will find various technologies at the cheapest price.',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey,
+                    ),
                   ),
-                ),
-                SizedBox(height: Constants.height * 0.03),
-                _buildCategorySection('beauty'.toUpperCase(), state, context),
-                SizedBox(height: Constants.height * 0.03),
-                _buildCategorySection(
-                    'fragrances'.toUpperCase(), state, context),
-                SizedBox(height: Constants.height * 0.03),
-                _buildCategorySection(
-                    'furniture'.toUpperCase(), state, context),
-                SizedBox(height: Constants.height * 0.03),
-                _buildCategorySection(
-                    'groceries'.toUpperCase(), state, context),
-              ],
+                  SizedBox(height: Constants.height * 0.03),
+                  _buildCategorySection('beauty'.toUpperCase(), state, context),
+                  SizedBox(height: Constants.height * 0.03),
+                  _buildCategorySection(
+                      'fragrances'.toUpperCase(), state, context),
+                  SizedBox(height: Constants.height * 0.03),
+                  _buildCategorySection(
+                      'furniture'.toUpperCase(), state, context),
+                  SizedBox(height: Constants.height * 0.03),
+                  _buildCategorySection(
+                      'groceries'.toUpperCase(), state, context),
+                ],
+              ),
             ),
           );
         },
